@@ -1,0 +1,25 @@
+name: Bug report
+description: Reportar um problema em algum agente ou no painel
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: repositorio
+    attributes:
+      label: Repositório afetado
+      options:
+        - fort-agents-core
+        - painel-gerenciamento
+        - Outro (especificar abaixo)
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs relevantes
+      render: shell
